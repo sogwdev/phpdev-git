@@ -12,11 +12,17 @@
 <input type = "submit" value = "送信">
 </form>
 
+<form action ="user.php" method="post">
+ユーザで絞込み
+<div><input type="text" name = "u"></div>
+<input type = "submit" value = "検索">
+</form>
+
 <?php
 $db = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;port=3306;dbname=heroku_ef5f71273fe5d40;charset=utf8','b712f8e8641bf4','466f991d');
 $ps = $db->query("SELECT * FROM admin");
 while ($r = $ps->fetch()){
-print "{$r['id']} {$r['name']} {$r['msg']} {$r['dt']}<hr>";}
+print "{$r['name']} {$r['msg']} {$r['dt']}<hr>";}
 ?>
 </body>
 </html>
