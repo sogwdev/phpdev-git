@@ -12,7 +12,7 @@ $db = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;port=3306;dbname=heroku_ef
 $db->query("insert into admin (id,name,msg,dt) values (NULL,'$my_nam','$my_mes',NOW())");
 print "成功";
 
-print "<p><a href = 'sns.php'>一覧へ</a></p>";
+print "<p><a href = 'home.php'>一覧へ</a></p>";
 ?>
 
 </body>
